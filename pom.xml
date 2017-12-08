@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.com.hustik</groupId>
-	<artifactId>hmoney-api</artifactId>
+	<artifactId>caiolancamento-api</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>hmoney-api</name>
+	<name>caiolancamento-api</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
