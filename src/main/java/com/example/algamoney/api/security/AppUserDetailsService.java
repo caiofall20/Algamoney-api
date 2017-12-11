@@ -22,13 +22,11 @@ public class AppUserDetailsService implements UserDetailsService {
 	private UsuarioRepository usuarioRepository;
 	
 	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Usuario usuario = usuarioRepository.findByEmail(username);
-        if (usuario == null) {
-            throw new UsernameNotFoundException(String.format("Usuário não existe!", username));
-        }
+	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+		Usuario usuario = usuarioRepository.findByEmail(email);		
 		return new UsuarioSistema(usuario, getPermissoes(usuario));
 	}
+
 
 	private Collection<? extends GrantedAuthority> getPermissoes(Usuario usuario) {
 		Set<SimpleGrantedAuthority> authorities = new HashSet<>();
